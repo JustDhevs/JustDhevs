@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvsaput5swwh5"]
+
+[ext_resource type="Script" path="res://Bullet.gd" id="1_3eikf"]
+[ext_resource type="Texture2D" uid="uid://y8bl0iwicddn" path="res://Laser Sprites/01.png" id="2_l0jw6"]
+
+[node name="Bullet" type="CharacterBody2D"]
+script = ExtResource("1_3eikf")
+
+[node name="BulletArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.2, -0.75)
+rotation = -1.5708
+scale = Vector2(0.5, 0.498)
+texture = ExtResource("2_l0jw6")

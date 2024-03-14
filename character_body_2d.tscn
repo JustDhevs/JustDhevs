@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dghnirsd1p7pj"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_pvekb"]
+[ext_resource type="Texture2D" uid="uid://uq0xf036hnps" path="res://Silver Fighter.png" id="2_2kk4h"]
+[ext_resource type="Texture2D" uid="uid://p7lecv4yiy7t" path="res://Laser Sprites/15.png" id="3_4v4tn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07gax"]
+size = Vector2(8.33333, 7.16667)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pvekb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2kk4h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.8147e-06, 1.5)
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_07gax")
+
+[node name="PlayerArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
+scale = Vector2(6, 6)
+
+[node name="Item" type="Sprite2D" parent="."]
+position = Vector2(0, -21)
+scale = Vector2(0.211934, 0.0357142)
+texture = ExtResource("3_4v4tn")
+
+[node name="BulletPos" type="Node2D" parent="Item"]
+position = Vector2(0, -252.001)
